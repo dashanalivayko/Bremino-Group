@@ -1,0 +1,46 @@
+@mixin h1 () {
+    font: {
+        family: Montserrat, sans-serif;
+        style: normal;
+        weight: bold;
+        size: 42px;
+    }
+    text-transform: uppercase;
+    color: black;
+    }
+
+@mixin h2 () {
+    font: {
+        family: Montserrat, sans-serif;
+        style: normal;
+        weight: 300;
+        size: 25px;
+    }
+    text-transform: uppercase;
+    line-height: 25px;
+    color: black;
+    }
+
+@mixin h3 () {
+    font: {
+        family: Montserrat, sans-serif;
+        style: normal;
+        weight: 300;
+        size: 20px;
+    }
+    text-transform: uppercase;
+    line-height: 20px;
+    color: black;
+    }
+
+@mixin h4 () {
+    font: {
+        family: Montserrat, sans-serif;
+        style: normal;
+        weight: bold;
+        size: 15px;
+    }
+    text-transform: uppercase;
+    line-height: 15px;
+    color: black;
+    }

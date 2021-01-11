@@ -1,0 +1,40 @@
+.button {
+    @include h4 (); 
+    border: solid 1px black;
+    border-radius: 10px;
+    padding: 20px 5px 20px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 230px;
+    height: 50px;
+}
+
+.arrow {
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.warehouses {
+    display: flex;
+    flex-direction: column;
+    margin-right: 115px;
+    &__button {
+        width: 550px;
+        padding: 40px 10px 40px 20px;
+        @include h3 ();
+        margin-top: 40px;
+        border-color: lightgray;
+        .arrow {
+            width: 60px;
+            height: 60px;
+        }
+    }
+
+}
