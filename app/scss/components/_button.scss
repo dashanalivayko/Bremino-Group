@@ -29,8 +29,10 @@
         width: 550px;
         padding: 40px 10px 40px 20px;
         @include h3 ();
-        margin-top: 40px;
         border-color: lightgray;
+        &:not(:first-child) {
+            margin-top: 40px;
+        }
         .arrow {
             width: 60px;
             height: 60px;

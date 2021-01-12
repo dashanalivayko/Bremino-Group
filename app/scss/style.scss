@@ -1,15 +1,17 @@
-@import "helpers/variables";
-@import "helpers/mixins";
-@import "helpers/media-queries";
+@import "helpers/_variables";
+@import "helpers/_mixins";
+@import "helpers/_media-queries";
 
-@import "vendors/normalize";
+@import "vendors/_normalize";
 
-@import "base/fonts";
-@import "base/base";
+@import "base/_fonts";
+@import "base/_base";
 
-@import "components/button";
+@import "components/_button";
+@import "components/_slider";
+@import "components/_cards";
 
-@import "pages/main";
+@import "pages/_main";
 
 @import "layout/_header";
 @import "layout/_footer";

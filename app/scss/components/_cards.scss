@@ -1,0 +1,68 @@
+// <div class="cards">
+//     <div class="cards__item">
+//         <div class="cards__item-title">Бремино-Орша</div>
+//         <div class="cards__item-price">
+//             <p>0,20 BYN с НДС <span>стеллажное хранение</span></p>
+//             <div class="cards__item-button button">Заказать</div>
+//         </div>
+//     </div>
+//     <div class="cards__item">
+//         <div class="cards__item-title">Бремино-Орша</div>
+//         <div class="cards__item-price">
+//             <p>0,20 BYN с НДС <span>стеллажное хранение</span></p>
+//             <div class="cards__item-button button">Заказать</div>
+//         </div>
+//     </div>
+//     <div class="cards__item">
+//         <div class="cards__item-title">Бремино-Орша</div>
+//         <div class="cards__item-price">
+//             <p>0,20 BYN с НДС <span>стеллажное хранение</span></p>
+//             <div class="cards__item-button button">Заказать</div>
+//         </div>
+//     </div>
+// </div>
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 30px;
+        &-title {
+            @include h4 ();
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        &-price {
+            @include h2 ();
+            text-transform: none;
+            line-height: 18px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            &:not(:last-child) {
+                border-bottom: solid 1px rgb(235, 236, 236);
+            }
+            padding: 25px 0;
+            span {
+                @include h4 ();
+                font-weight: 300;
+                text-transform: none;
+            }
+        }
+        &-button {
+            border-radius: 10px;
+            background-color: rgb(76, 107, 177);
+            @include h4 ();
+            color: white;
+            display: flex;
+            justify-content: center;
+            padding: 15px 30px;
+            margin-left: 110px;
+        }
+    }
+}
+  

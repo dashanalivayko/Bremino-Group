@@ -1,7 +1,8 @@
 #banner {
-    background-image: url(../images/banner.jpg);
+    background-image: url(../images/banner.png);
     background-position: top right;
     background-repeat: no-repeat;
+    background-color: #fbfbfb;
 }
 
 .banner {
@@ -26,17 +27,22 @@
     }
 }
 
+// #about {
+//     background-color: #fbfbfb;
+// }
+
 .about {
     display: flex;
     flex-direction: column;
     justify-content: start;
     @include h1 ();
-    padding: 100px 0;
+    padding: 100px 0 0 0;
     &__title {
-        margin-bottom: 100px;
+        margin-bottom: 80px;
     }
     &__content {
         display: flex;
+        align-items: center;
         &-img {
             margin-right: 150px;
             background-color: #dadada38;
@@ -52,7 +58,9 @@
             align-items: flex-start;
             width: 560px;
             &-point {
-                margin-top: 80px;
+                &:not(:first-child) {
+                    margin-top: 80px;
+                }
                 display: flex;
                 justify-content: space-between;
                 p {
@@ -64,25 +72,118 @@
     }
 }
 
+.network {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    @include h1 ();
+    padding: 100px 0 0 0;
+    &__title {
+        margin-bottom: 80px;
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        &-map {
+            background-color: #dadada38;
+            width: 1140px;
+            height: 630px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 100px;
+        }
+        &__points {
+            display: flex;
+            flex-direction: column;
+            &-row {
+                display: flex;
+                justify-content: space-around;
+                &:not(:last-child) {
+                    margin-bottom: 100px;
+                }
+            }
+            &-point {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 230px;
+                p {
+                    @include h4 ();
+                    font-weight: 300;
+                    display: flex;
+                    text-align: center;
+                    margin-top: 50px;
+                }
+            }
+        }
+    }
+}
+
+
 .tarrifs {
     display: flex;
     flex-direction: column;
     justify-content: start;
     @include h1 ();
-    padding: 100px 0;
+    padding: 100px 0 0 0;
     &__title {
-        margin-bottom: 40px;
+        margin-bottom: 80px;
     }
     &__content {
         display: flex;
+        align-items: center;
     }
 }
 
+.proms {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    @include h1 ();
+    padding: 100px 0 100px 0;
+    &__title {
+        margin-bottom: 80px;
+    }
+    &__content {
+        display: flex;
+        align-items: center;
+        &-img {
+            margin-left: 150px;
+            background-color: #dadada38;
+            width: 430px;
+            height: 590px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &__points {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 560px;
+            &-point {
+                &:not(:first-child) {
+                    margin-top: 80px;
+                }
+                display: flex;
+                justify-content: space-between;
+                p {
+                    margin-left: 40px;
+                    @include h2 ();
+                }
+            }
+        }
+    }
+}
 
 #questions {
     background-image: url(../images/help.png);
     background-position: top right;
     background-repeat: no-repeat;
+    background-color: #e6f1f3;
+    
 }
 
 .questions {
@@ -96,7 +197,7 @@
         align-items: flex-start;
         &-title {
             @include h1 (); 
-            margin-bottom: 30px;
+            margin-bottom: 80px;
         }
         &-subtitle {
             @include h3 ();

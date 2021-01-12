@@ -34,7 +34,8 @@ gulp.task('run',
     'html',
     'fonts-dist',
 		'img-min',
-		'watch'	
+		'watch',
+		'scss'	
   ], function() {
   browserSync.init({
     server: "./dist"
