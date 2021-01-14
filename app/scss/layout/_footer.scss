@@ -1,0 +1,50 @@
+// <div class="footer">
+//     <div class="footer__links">
+//         <a href="https://bremino.by/" target="_blank" rel="noopener noreferrer">о компании</a>
+//         <a href="http://bremino.by/news/" target="_blank" rel="noopener noreferrer">новости</a>
+//         <a href="https://bremino.by/uslugy.html" target="_blank" rel="noopener noreferrer">услуги</a>
+//     </div>
+//     <div class="footer__media">
+//         <a href="https://www.facebook.com/breminogroup/" target="_blank" rel="noopener noreferrer">facebook</a>
+//         <a href="https://www.linkedin.com/company/20553308/" target="_blank" rel="noopener noreferrer">linkedin</a>
+//         <a href="https://www.instagram.com/bremino_group/" target="_blank" rel="noopener noreferrer">instagram</a>
+//         <a href="https://www.youtube.com/channel/UCeu2yjNHcww8WKRsg6cmPHw" target="_blank" rel="noopener noreferrer">youtube</a>
+//     </div>
+// </div>
+// </div>
+// </section>
+
+#footer {
+    padding: 60px 0;
+    background-color: rgb(76, 107, 177);
+    a {
+        @include h4 ();
+        font-weight: 300;
+        color: white;
+        margin-bottom: 20px;
+    }
+}
+
+.footer {
+    display: flex;
+    width: 100%;
+    &__links {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-right: 75px;
+    }
+    &__media {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    &__logo {
+        display: flex;
+        margin-left: auto;
+        img {
+            width: auto;
+            height: 80px;
+        }
+    }
+}

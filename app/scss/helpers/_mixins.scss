@@ -6,7 +6,7 @@
         size: 42px;
     }
     text-transform: uppercase;
-    color: black;
+    color: var(--main-color);
     }
 
 @mixin h2 () {
@@ -18,7 +18,7 @@
     }
     text-transform: uppercase;
     line-height: 25px;
-    color: black;
+    color: var(--main-color);
     }
 
 @mixin h3 () {
@@ -30,7 +30,7 @@
     }
     text-transform: uppercase;
     line-height: 20px;
-    color: black;
+    color: var(--main-color);
     }
 
 @mixin h4 () {
@@ -42,5 +42,5 @@
     }
     text-transform: uppercase;
     line-height: 15px;
-    color: black;
+    color: var(--main-color);
     }

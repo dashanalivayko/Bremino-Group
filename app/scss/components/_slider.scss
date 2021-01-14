@@ -22,6 +22,7 @@
 //         &-img {
 //             height: 450px;
 //             width: 100%; 
+//             background-image: url(..\images\banner.png)
 //         }
 //     }
 //     &__container {
@@ -29,7 +30,7 @@
 //       justify-content: flex-end;
 //       position: relative;
 //       right: 15px;
-//       bottom: 0; 
+//       bottom: 0;
 //     }
 //     &__control {
 //       display: flex;
@@ -44,7 +45,7 @@
 //             text-decoration: none;
 //             outline: 0; 
 //         }
-//         &_left {
+//         &-left {
 //             left: 0;
 //             font-family: "Montserrat-ExtraBold.ttf";
 //             font-size: 1.1rem;
@@ -53,7 +54,7 @@
 //             margin: 0 15px;
 //             opacity: 0.6; 
 //         }
-//         &_right {
+//         &-right {
 //             right: 0;
 //             left: 0;
 //             font-family: "Montserrat-ExtraBold.ttf";
@@ -98,7 +99,7 @@
 //         align-items: center;
 //         cursor: pointer;
 //         margin: 50px 0 0 0; 
-//         &--text {
+//         &-text {
 //             font-family: "Montserrat-Regular.ttf";
 //             color: white;
 //             font-size: 1.5rem;
@@ -109,133 +110,11 @@
 //             background: none;
 //             outline: none; 
 //         }
-//         &--line {
+//         &-line {
 //             width: 100px;
 //             height: 1px;
 //             background: white;
 //             margin: 0 0 0 25px; 
-//         }
-//     }
-//     &--terminal {
-//         width: 40%;
-//         position: relative;
-//         overflow: hidden;
-//         height: 650px;
-//         &__wrapper {
-//             display: flex;
-//             transition: transform 0.6s ease; 
-//         }
-//         &__text {
-//             display: flex;
-//             align-items: flex-start;
-//             justify-content: center;
-//             flex-direction: column;
-//             padding: 0 10px 0 15px;
-//             width: 100%; 
-//         }
-//         &__item {
-//             flex: 0 0 100%;
-//             max-width: 100%; 
-//             &--img {
-//             height: 650px;
-//             width: 100%; 
-//             }
-//             div {
-//                 text-align: left;
-//                 display: flex;
-//                 align-items: center;
-//                 justify-content: center; 
-//             }
-//         }
-//         &__container {
-//             display: flex;
-//             justify-content: flex-end;
-//             margin: 3px 0 0 0; 
-//         }
-//         &__control {
-//             display: flex;
-//             align-items: center;
-//             justify-content: center;
-//             width: 50px;
-//             text-align: center;
-//             height: 50px;
-//             transform: translateY(-105%); 
-//             &:hover, :focus {
-//                 color: white;
-//                 text-decoration: none;
-//                 outline: 0; 
-//             }
-//             &_left {
-//                 left: 0;
-//                 font-family: "Montserrat-ExtraBold.ttf";
-//                 font-size: 1.1rem;
-//                 color: white;
-//                 text-transform: uppercase;
-//                 margin: 0 15px;
-//                 opacity: 0.6; 
-//             }
-//             &_right {
-//                 right: 0;
-//                 left: 0;
-//                 font-family: "Montserrat-ExtraBold.ttf";
-//                 font-size: 1.1rem;
-//                 color: white;
-//                 text-transform: uppercase;
-//                 margin: 0 15px;
-//                 opacity: 0.6; 
-//             }
-//             &::before {
-//                 content: '';
-//                 display: inline-block;
-//                 width: 20px;
-//                 height: 20px;
-//                 background: transparent no-repeat center center;
-//                 background-size: 100% 100%; 
-//             }
-//         }
-//         &__title {
-//             color: white;
-//             font-family: "Montserrat-ExtraBold.ttf";
-//             font-size: 2.8rem;
-//             text-transform: uppercase;
-//             margin: 0;
-//             padding: 0; 
-//             &--add {
-//                 font-family: "Montserrat-Bold.ttf"; 
-//             }
-//         }
-//         &__subtitle {
-//             color: white;
-//             font-family: "Montserrat-Regular.ttf";
-//             margin: 20px 0 0 0;
-//             padding: 0;
-//             font-size: 1.5rem;
-//             text-transform: uppercase; 
-//         }
-//         &__button {
-//             padding: 0;
-//             display: flex;
-//             justify-content: flex-start;
-//             align-items: center;
-//             cursor: pointer;
-//             margin: 50px 0 0 0; 
-//             &--text {
-//                 font-family: "Montserrat-Regular.ttf";
-//                 color: white;
-//                 font-size: 1.5rem;
-//                 text-transform: uppercase;
-//                 margin: 0;
-//                 border: none;
-//                 transition: 0.2s ease-out;
-//                 background: none;
-//                 outline: none; 
-//             }
-//             &--line {
-//                 width: 100px;
-//                 height: 1px;
-//                 background: white;
-//                 margin: 0 0 0 25px; 
-//             }
 //         }
 //     }
 // }
