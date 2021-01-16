@@ -12,11 +12,17 @@
         left: 355px;
         top: 540px;
         align-items: flex-end;
+        &:hover {
+            left: 222px;
+        }
     }
     &__berestovica {
         left: 368px;
         top: 578px;
         align-items: flex-end;
+        &:hover {
+            left: 293px;
+        }
     }
     &__label, &__description {
         display: none;
@@ -28,7 +34,6 @@
         border-radius: 5px;
         background-color: rgb(255, 255, 255);
         box-shadow: 0px 0px 9.9px 0.1px rgba(224, 223, 223, 0.77);
-        margin-bottom: 10px;
         width: fit-content;
         img {
             margin-right: 5px;
@@ -38,10 +43,10 @@
     }    
     &__label {
         display: flex;
-         &:hover {
-             &~ .tlc__description {
-                display: initial;
-             }
+        &:hover {
+            &~ .tlc__description {
+            display: initial;
+            }
         }
     }
     &__description {
@@ -50,6 +55,7 @@
         font-weight: 600;
         padding: 5px 70px 5px 10px;
         z-index: 2;
+        margin-top: 10px;
         &-item {
             margin-bottom: 20px;
             line-height: 20px;
