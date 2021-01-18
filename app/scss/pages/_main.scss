@@ -185,11 +185,10 @@
 }
 
 #questions {
-    background-image: url(../images/help.png);
-    background-position: top right;
+    background-image: url(..\images\banner_qst.png);
+    background-position: top;
     background-repeat: no-repeat;
-    background-color: #e6f1f3;
-    
+    background-size: cover;
 }
 
 .questions {
@@ -204,14 +203,22 @@
         &-title {
             @include h1 (); 
             margin-bottom: 80px;
+            color: white;
         }
         &-subtitle {
             @include h3 ();
             width: 450px; 
             text-transform: inherit;
+            color: white;
         }
         &-button {
             margin-top: 100px;
+            color: white;
+            border-color: white;
+            .arrow {
+                background-color: white;
+
+            }
         }
     }
 }

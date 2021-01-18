@@ -24,7 +24,7 @@
 			</div>
 		</header>
 
-		<main>
+		<main style="position: relative;">
 
 			<section id="banner">
 				<div class="container">
@@ -49,7 +49,7 @@
 						<div class="about__title">о нас</div>
 						<div class="about__content">
 							<div class="about__content-img">
-								<video id="video" preload="auto" src="images/section.mp4"></video>
+								<video id="v" autoplay src="../images/section.mp4"></video>
 							</div>
 							<div class="about__content__points">
 								<div class="about__content__points-point">
@@ -198,7 +198,7 @@
 					</div>				  			  
 				</div>
 			</section>
-			
+
 			<section id="slider">
 				<div class="container">
 					<div class="slider">
@@ -355,7 +355,7 @@
 							<div class="questions__content-button button">
 								напишите нам
 								<div class="arrow">
-									<img src="../images/right-arrow.svg" alt="arrow" style="width: 40px; height: 25px;">
+									<img src="../images/right-arrow-dark.svg" alt="arrow" style="width: 25px; height: 25px;">
 								</div>
 							</div>
 						</div>
@@ -427,19 +427,19 @@
 							<p class="form__content-title">форма заказа</p>
 							<form class="sendForm">
 								<div class="sendForm__input">
-									<img src="..\images\userpic.png" alt="arrows">
+									<img src="..\images\user.svg" alt="pic">
 									<input placeholder="Имя" class="sendForm__input-name" type="text">
 								</div>
 								<div class="sendForm__input">
-									<img src="..\images\userpic.png" alt="arrows">
+									<img src="..\images\call.svg" alt="pic">
 									<input placeholder="Номер" class="sendForm__input-number" type="text">
 								</div>
 								<div class="sendForm__input">
-									<img src="..\images\userpic.png" alt="arrows">
+									<img src="..\images\at.svg" alt="pic">
 									<input placeholder="E-mail" class="sendForm__input-e-mail" type="text">
 								</div>
 								<div class="sendForm__input">
-									<img src="..\images\userpic.png" alt="arrows">
+									<img src="..\images\box.svg" alt="pic">
 									<input placeholder="Товар" class="sendForm__input-product" type="text">
                                 </div>
 								<div class="form__content-button button">
@@ -454,8 +454,20 @@
 					</div>
 				</div>
 			</section>
+
+			<section id="thanks">
+				<div class="container">
+					<div class="form">
+						<div class="form__content">
+							<p class="form__content-title">спасибо за заявку! <br> Мы вам перезвоним</p>
+							<div class="close"></div>
+						</div>
+					</div>
+				</div>
+			</section>
 			
 		</main>
+
 	</body>
 
 	<script src="js/main.js"></script>
