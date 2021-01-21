@@ -5,7 +5,10 @@
     background-color: #fbfbfb;
     opacity: 0;
     visibility: hidden;
-    transition: 0.2s ease-in;
+    pointer-events: none;
+    position: fixed;
+    height: 100vh;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .form {
@@ -20,6 +23,8 @@
         z-index: 5;
         opacity: 1 !important;
         visibility: initial !important;
+        pointer-events: initial !important;
+        transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
     &__content {
         display: flex;
@@ -43,24 +48,47 @@
 .sendForm {
     width: 315px;
     &__input {
+        position: relative;
         border-bottom: 1px solid black;
-        @include h4 ();
         display: flex;
         align-items: center;
-        color: #252B42;
-        padding: 0 10px;
         margin-bottom: 25px;
+        & label {
+            position: absolute;
+            left: 42px;
+            top: 50%;
+            transform: translateY(-50%);    
+            letter-spacing: 0.01em;
+            transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+            color: rgb(172, 172, 172);
+        }
         img {
             width: 20px;
             height: 20px;  
+            position: absolute;
+            left: 10px;
         }
         input {
             background: none;
             width: 100%;
             height: 100%;
             border: none;
-            padding: 10px 0;
-            margin-left: 10px;
+            padding: 10px 40px;
+            outline: none;
+            &::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+            cursor: pointer;
+            &:focus + label {
+                color: rgb(49, 47, 47);
+            }
+            &:focus + label,
+            &:not(:placeholder-shown) + label {
+                font-size: 12px;
+                line-height: 1.17;
+                transform: translate(-26px, -36px);
+            }
         }
     }
 }
@@ -97,14 +125,7 @@
     cursor: pointer;
 }
 
-#thanks {
-    background-image: url(../images/form.png);
-    background-position: center right;
-    background-repeat: no-repeat;
-    background-color: #fbfbfb;
-    opacity: 0;
-    visibility: hidden;
-    transition: 0.2s ease-in;
-    height: 695px;
-    transition: 0.2s ease-in;
+
+.hidden {
+    display: none;
 }

@@ -1,9 +1,5 @@
 
-
-
-
-
-
+//слайдер
 'use strict';
 var multiItemSlider = (function () {
 
@@ -244,3 +240,90 @@ var multiItemSlider = (function () {
 var slider = multiItemSlider('.slider', {
 	isCycling: true
 })
+
+
+
+
+
+
+
+// форма связи
+const openFormBtn = document.querySelector('.banner__content-button');
+const closeFormBtn = document.querySelector('.close');
+const sectionForm = document.querySelector('#form');
+
+openFormBtn.addEventListener('click', openModal);
+closeFormBtn.addEventListener('click', closeModal);
+window.addEventListener('keydown', escKeyPress);
+
+function openModal() {
+	sectionForm.classList.add('form-active');
+	parentForm.replaceChild(mainForm, hidden);
+}
+
+function closeModal() {
+	sectionForm.classList.remove('form-active');
+}
+
+function escKeyPress(e) {
+	if(e.keyCode === 27) {
+		closeModal();
+	}
+}
+
+// кнопка отправки
+const sendForm = document.querySelector('form');
+const mainForm = document.querySelector ('.form__content');
+const hidden = document.querySelector ('.hidden');
+const parentForm = mainForm.parentNode;
+
+sendForm.addEventListener('submit', formData);
+
+function formData(e) {
+	e.preventDefault();
+	new FormData(e.currentTarget).forEach((value, name) =>
+		console.log(`${name}: ${value}`),
+	);
+	parentForm.replaceChild(hidden, mainForm);
+	hidden.style.display = 'flex';
+	setTimeout(closeModal, 2500);
+	e.currentTarget.reset();
+}
+
+//цены на складское хранение
+const sop = document.querySelector('#sop');
+const svh = document.querySelector('#svh');
+const stz = document.querySelector('#stz');
+const cold = document.querySelector('#cold');
+const opened = document.querySelector('#opened');
+const warehousesButtons = document.querySelector('.warehouses');
+const priceContainer = document.querySelector('.example');
+
+warehousesButtons.addEventListener('click', (e) => {
+    const buttonType = e.target.dataset.type;
+	if (buttonType) {
+		switch (buttonType) {
+			case 'sop':
+				parentForm.replaceChild(sop, priceContainer);
+				hidden.style.display = 'flex';
+				break;
+			case 'svh':
+				parentForm.replaceChild(svh, priceContainer);
+				hidden.style.display = 'flex';
+				break;
+			case 'stz':
+				parentForm.replaceChild(stz, priceContainer);
+				hidden.style.display = 'flex';
+				break;
+			case 'cold':
+				parentForm.replaceChild(cold, priceContainer);
+				hidden.style.display = 'flex';
+				break;
+			case 'opened':
+				parentForm.replaceChild(opened, priceContainer);
+				hidden.style.display = 'flex';
+				break;
+		}
+	}
+});
+

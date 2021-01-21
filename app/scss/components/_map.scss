@@ -43,8 +43,10 @@
     }    
     &__label {
         display: flex;
+        transition: 2s ease-out;
         &:hover {
-            &~ .tlc__description {
+            transition: 2s ease-out;
+            & ~ .tlc__description {
             display: initial;
             }
         }

@@ -243,35 +243,35 @@
 						<div class="tarrifs__title">наши тарифы</div>
 						<div class="tarrifs__content">
 							<div class="warehouses">
-								<div class="warehouses__button button">склад общего пользования
+								<button data-type="sop" class="warehouses__button button">склад общего пользования
 									<div class="arrow">
 										<img src="../images/right-arrow.svg" alt="arrow">
 									</div>
-								</div>
-								<div class="warehouses__button button">склад временного хранения
+								</button>
+								<button data-type="svh" class="warehouses__button button">склад временного хранения
 									<div class="arrow">
 										<img src="../images/right-arrow.svg" alt="arrow">
 									</div>
-								</div>
-								<div class="warehouses__button button">таможенный склад
+								</button>
+								<button data-type="stz" class="warehouses__button button">таможенный склад
 									<div class="arrow">
 										<img src="../images/right-arrow.svg" alt="arrow">
 									</div>
-								</div>
-								<div class="warehouses__button button">склад-холодильник
+								</button>
+								<button data-type="cold" class="warehouses__button button">склад-холодильник
 									<div class="arrow">
 										<img src="../images/right-arrow.svg" alt="arrow">
 									</div>
-								</div>
-								<div class="warehouses__button button">открытая площадка
+								</button>
+								<button data-type="opened" class="warehouses__button button">открытая площадка
 									<div class="arrow">
 										<img src="../images/right-arrow.svg" alt="arrow">
 									</div>
-								</div>
+								</button>
 							</div>
-							<div class="cards">
+							<div  class="cards" id="sop">
 								<div class="cards__item">
-									<div class="cards__item-title">Бремино-Орша</div>
+									<div class="cards__item-title">SOP Бремино-Орша</div>
 									<div class="cards__item-price">
 										<p>0,20 BYN с НДС <br><span>стеллажное хранение</span></p>
 										<div class="cards__item-button">Заказать</div>
@@ -294,6 +294,124 @@
 								</div>
 								<div class="cards__item">
 									<div class="cards__item-title">Бремино-Берестовица</div>
+									<div class="cards__item-price">
+										<p>0,20 BYN с НДС <br><span>стеллажное хранение</span></p>
+										<div class="cards__item-button">Заказать</div>
+									</div>
+									<div class="cards__item-price">
+										<p>0,49 BYN с НДС <br><span>напольное хранение</span></p>
+										<div class="cards__item-button">Заказать</div>
+									</div>
+								</div>
+							</div>
+							<div class="cards hidden" id="svh">
+								<div class="cards__item">
+									<div class="cards__item-title">SVH Бремино-Орша</div>
+									<div class="cards__item-price">
+										<p>0,20 BYN с НДС <br><span>стеллажное хранение</span></p>
+										<div class="cards__item-button">Заказать</div>
+									</div>
+									<div class="cards__item-price">
+										<p>0,49 BYN с НДС <br><span>напольное хранение</span></p>
+										<div class="cards__item-button">Заказать</div>
+									</div>
+								</div>
+								<div class="cards__item">
+									<div class="cards__item-title">Бремино-Брузги</div>
+									<div class="cards__item-price">
+										<p>0,20 BYN с НДС <br><span>стеллажное хранение</span></p>
+										<div class="cards__item-button">Заказать</div>
+									</div>
+									<div class="cards__item-price">
+										<p>0,49 BYN с НДС <br><span>напольное хранение</span></p>
+										<div class="cards__item-button">Заказать</div>
+									</div>
+								</div>
+								<div class="cards__item">
+									<div class="cards__item-title">Бремино-Берестовица</div>
+									<div class="cards__item-price">
+										<p>0,20 BYN с НДС <br><span>стеллажное хранение</span></p>
+										<div class="cards__item-button">Заказать</div>
+									</div>
+									<div class="cards__item-price">
+										<p>0,49 BYN с НДС <br><span>напольное хранение</span></p>
+										<div class="cards__item-button">Заказать</div>
+									</div>
+								</div>
+							</div>
+							<div class="cards hidden" id="stz">
+								<div class="cards__item">
+									<div class="cards__item-title">STZ Бремино-Орша</div>
+									<div class="cards__item-price">
+										<p>0,20 BYN с НДС <br><span>стеллажное хранение</span></p>
+										<div class="cards__item-button">Заказать</div>
+									</div>
+									<div class="cards__item-price">
+										<p>0,49 BYN с НДС <br><span>напольное хранение</span></p>
+										<div class="cards__item-button">Заказать</div>
+									</div>
+								</div>
+								<div class="cards__item">
+									<div class="cards__item-title">Бремино-Брузги</div>
+									<div class="cards__item-price">
+										<p>0,20 BYN с НДС <br><span>стеллажное хранение</span></p>
+										<div class="cards__item-button">Заказать</div>
+									</div>
+									<div class="cards__item-price">
+										<p>0,49 BYN с НДС <br><span>напольное хранение</span></p>
+										<div class="cards__item-button">Заказать</div>
+									</div>
+								</div>
+								<div class="cards__item">
+									<div class="cards__item-title">Бремино-Берестовица</div>
+									<div class="cards__item-price">
+										<p>0,20 BYN с НДС <br><span>стеллажное хранение</span></p>
+										<div class="cards__item-button">Заказать</div>
+									</div>
+									<div class="cards__item-price">
+										<p>0,49 BYN с НДС <br><span>напольное хранение</span></p>
+										<div class="cards__item-button">Заказать</div>
+									</div>
+								</div>
+							</div>
+							<div class="cards hidden" id="cold">
+								<div class="cards__item">
+									<div class="cards__item-title"> COLD Бремино-Брузги</div>
+									<div class="cards__item-price">
+										<p>0,20 BYN с НДС <br><span>стеллажное хранение</span></p>
+										<div class="cards__item-button">Заказать</div>
+									</div>
+									<div class="cards__item-price">
+										<p>0,49 BYN с НДС <br><span>напольное хранение</span></p>
+										<div class="cards__item-button">Заказать</div>
+									</div>
+								</div>
+								<div class="cards__item">
+									<div class="cards__item-title">Бремино-Берестовица</div>
+									<div class="cards__item-price">
+										<p>0,20 BYN с НДС <br><span>стеллажное хранение</span></p>
+										<div class="cards__item-button">Заказать</div>
+									</div>
+									<div class="cards__item-price">
+										<p>0,49 BYN с НДС <br><span>напольное хранение</span></p>
+										<div class="cards__item-button">Заказать</div>
+									</div>
+								</div>
+							</div>
+							<div class="cards hidden" id="opened">
+								<div class="cards__item">
+									<div class="cards__item-title">OPENED Бремино-Орша</div>
+									<div class="cards__item-price">
+										<p>0,20 BYN с НДС <br><span>стеллажное хранение</span></p>
+										<div class="cards__item-button">Заказать</div>
+									</div>
+									<div class="cards__item-price">
+										<p>0,49 BYN с НДС <br><span>напольное хранение</span></p>
+										<div class="cards__item-button">Заказать</div>
+									</div>
+								</div>
+								<div class="cards__item">
+									<div class="cards__item-title">Бремино-Брузги</div>
 									<div class="cards__item-price">
 										<p>0,20 BYN с НДС <br><span>стеллажное хранение</span></p>
 										<div class="cards__item-button">Заказать</div>
@@ -421,51 +539,48 @@
 			</section>
 
 			<section id="form">
-				<div class="container">
+				<div class="container ">
 					<div class="form">
 						<div class="form__content">
 							<p class="form__content-title">форма заказа</p>
-							<form class="sendForm">
+							<form class="sendForm" autocomplete="off">
 								<div class="sendForm__input">
 									<img src="..\images\user.svg" alt="pic">
-									<input placeholder="Имя" class="sendForm__input-name" type="text">
+									<input placeholder=" " class="sendForm__input-name" type="name" name="name" required>
+									<label for="name">Имя</label>
 								</div>
 								<div class="sendForm__input">
 									<img src="..\images\call.svg" alt="pic">
-									<input placeholder="Номер" class="sendForm__input-number" type="text">
+									<input placeholder=" " class="sendForm__input-number" type="number" name="number" required>
+									<label for="number">Телефон</label>
 								</div>
 								<div class="sendForm__input">
 									<img src="..\images\at.svg" alt="pic">
-									<input placeholder="E-mail" class="sendForm__input-e-mail" type="text">
+									<input placeholder=" " class="sendForm__input-e-mail" type="email" name="email" required>
+									<label for="email">E-mail</label>
 								</div>
 								<div class="sendForm__input">
 									<img src="..\images\box.svg" alt="pic">
-									<input placeholder="Товар" class="sendForm__input-product" type="text">
+									<input placeholder=" " class="sendForm__input-product" type="text" name="product" required>
+									<label for="product">Товар</label>
                                 </div>
-								<div class="form__content-button button">
+								<button class="form__content-button button" type="submit">
 									Отправить
 									<div class="arrow">
 										<img src="../images/right-arrow.svg" alt="arrow" style="width: 40px; height: 25px;">
 									</div>
-								</div>
+								</button>
 							</form>
 							<div class="close"></div>
 						</div>
+						<div class="form__content hidden">
+							<p class="form__content-title">CПАСИБО ЗА ЗАКАЗ!<br> МЫ ВАМ ПЕРЕЗВОНИМ</p>
+						</div>
+						
 					</div>
 				</div>
 			</section>
 
-			<section id="thanks">
-				<div class="container">
-					<div class="form">
-						<div class="form__content">
-							<p class="form__content-title">спасибо за заявку! <br> Мы вам перезвоним</p>
-							<div class="close"></div>
-						</div>
-					</div>
-				</div>
-			</section>
-			
 		</main>
 
 	</body>
