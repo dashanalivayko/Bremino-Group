@@ -249,12 +249,15 @@ var slider = multiItemSlider('.slider', {
 
 // форма связи
 const openFormBtn = document.querySelector('.banner__content-button');
+const openFormBtnQ = document.querySelector('.questions__content-button');
 const closeFormBtn = document.querySelector('.close');
 const sectionForm = document.querySelector('#form');
 
 openFormBtn.addEventListener('click', openModal);
+openFormBtnQ.addEventListener('click', openModal);
 closeFormBtn.addEventListener('click', closeModal);
 window.addEventListener('keydown', escKeyPress);
+
 
 function openModal() {
 	sectionForm.classList.add('form-active');
@@ -277,6 +280,7 @@ const mainForm = document.querySelector ('.form__content');
 const hidden = document.querySelector ('.hidden');
 const parentForm = mainForm.parentNode;
 
+
 sendForm.addEventListener('submit', formData);
 
 function formData(e) {
@@ -297,31 +301,30 @@ const stz = document.querySelector('#stz');
 const cold = document.querySelector('#cold');
 const opened = document.querySelector('#opened');
 const warehousesButtons = document.querySelector('.warehouses');
-const priceContainer = document.querySelector('.example');
+const cards = document.querySelectorAll('.cards');
+
 
 warehousesButtons.addEventListener('click', (e) => {
     const buttonType = e.target.dataset.type;
 	if (buttonType) {
+		cards.forEach ((elem) => {
+			elem.classList.add('hidden');
+		});
 		switch (buttonType) {
 			case 'sop':
-				parentForm.replaceChild(sop, priceContainer);
-				hidden.style.display = 'flex';
+				sop.classList.remove('hidden');
 				break;
 			case 'svh':
-				parentForm.replaceChild(svh, priceContainer);
-				hidden.style.display = 'flex';
+				svh.classList.remove('hidden');
 				break;
 			case 'stz':
-				parentForm.replaceChild(stz, priceContainer);
-				hidden.style.display = 'flex';
+				stz.classList.remove('hidden');
 				break;
 			case 'cold':
-				parentForm.replaceChild(cold, priceContainer);
-				hidden.style.display = 'flex';
+				cold.classList.remove('hidden');
 				break;
 			case 'opened':
-				parentForm.replaceChild(opened, priceContainer);
-				hidden.style.display = 'flex';
+				opened.classList.remove('hidden');
 				break;
 		}
 	}
