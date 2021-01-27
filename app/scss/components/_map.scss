@@ -4,24 +4,30 @@
     flex-direction: column;
     
     &__orsha {
-        left: 695px;
-        top: 450px;
+        left: 710px;
+        top: 455px;
         align-items: flex-start;
+        @include screen-max ($hd) {
+            left: 490px;
+            top: 339px;
+        }
     }
     &__bruzgi {
-        left: 355px;
-        top: 540px;
+        left: 366px;
+        top: 548px;
         align-items: flex-end;
-        &:hover {
-            left: 222px;
+        @include screen-max ($hd) {
+            left: 314px;
+            top: 387px;
         }
     }
     &__berestovica {
-        left: 368px;
-        top: 578px;
+        left: 374px;
+        top: 584px;
         align-items: flex-end;
-        &:hover {
-            left: 293px;
+        @include screen-max ($hd) {
+            left: 323px;
+            top: 412px;
         }
     }
     &__label, &__description {
@@ -37,19 +43,19 @@
         width: fit-content;
         img {
             margin-right: 5px;
-            width: 18px;
-            height: 13px;
+            width: 25px;
+            height: 25px;
+            @include screen-max ($hd) {
+                width: 15px;
+                height: 15px;
+            }
+        }
+        @include screen-max ($hd) {
+            font-size: 10px;
         }
     }    
     &__label {
-        display: flex;
-        transition: 2s ease-out;
-        &:hover {
-            transition: 2s ease-out;
-            & ~ .tlc__description {
-            display: initial;
-            }
-        }
+        display: flex; 
     }
     &__description {
         flex-direction: column;

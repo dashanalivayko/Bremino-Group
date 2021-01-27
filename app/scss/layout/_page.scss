@@ -3,6 +3,15 @@
     margin: 0 auto;
     padding: 0; 
     position: relative;
+    @include screen-max ($hd) {
+        width: 860px;
+    }
+    @include screen-max ($lg) {
+        width: 380px;
+    }
+    @include screen-max ($sm) {
+        width: 240px;
+    }
 }
 
 :root {

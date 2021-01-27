@@ -261,7 +261,7 @@ window.addEventListener('keydown', escKeyPress);
 
 function openModal() {
 	sectionForm.classList.add('form-active');
-	parentForm.replaceChild(mainForm, hidden);
+	parentForm.replaceChild(mainForm, thanks);
 }
 
 function closeModal() {
@@ -277,7 +277,7 @@ function escKeyPress(e) {
 // кнопка отправки
 const sendForm = document.querySelector('form');
 const mainForm = document.querySelector ('.form__content');
-const hidden = document.querySelector ('.hidden');
+const thanks = document.querySelector ('#thanks');
 const parentForm = mainForm.parentNode;
 
 
@@ -288,8 +288,8 @@ function formData(e) {
 	new FormData(e.currentTarget).forEach((value, name) =>
 		console.log(`${name}: ${value}`),
 	);
-	parentForm.replaceChild(hidden, mainForm);
-	hidden.style.display = 'flex';
+	parentForm.replaceChild(thanks, mainForm);
+	thanks.style.display = 'flex';
 	setTimeout(closeModal, 2500);
 	e.currentTarget.reset();
 }

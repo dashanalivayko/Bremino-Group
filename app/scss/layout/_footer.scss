@@ -17,22 +17,37 @@
 #footer {
     padding: 60px 0;
     background-color: rgb(76, 107, 177);
+    @include screen-max ($sm) {
+            padding: 30px;
+        }
     a {
         @include h4 ();
         font-weight: 300;
         color: white;
         margin-bottom: 20px;
+        @include screen-max ($lg) {
+            font-size: 15px;
+        } 
     }
 }
 
 .footer {
     display: flex;
     width: 100%;
+    @include screen-max ($sm) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
     &__links {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         margin-right: 75px;
+        @include screen-max ($sm) {
+            margin-right: 0px;
+        }
     }
     &__media {
         display: flex;
@@ -42,9 +57,15 @@
     &__logo {
         display: flex;
         margin-left: auto;
+        @include screen-max ($sm) {
+            margin-left: 0px;
+        }
         img {
             width: auto;
             height: 80px;
+            @include screen-max ($lg) {
+                height: 30px;
+            }
         }
     }
 }

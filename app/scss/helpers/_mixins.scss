@@ -7,7 +7,10 @@
     }
     text-transform: uppercase;
     color: var(--main-color);
+    @include screen-max ($sm) {
+        font-size: 25px;
     }
+}
 
 @mixin h2 () {
     font: {
@@ -19,7 +22,13 @@
     text-transform: uppercase;
     line-height: 25px;
     color: var(--main-color);
+    @include screen-max ($hd) {
+        font-size: 18px;
     }
+    @include screen-max ($sm) {
+        font-size: 10px;
+    }
+}
 
 @mixin h3 () {
     font: {
@@ -31,7 +40,13 @@
     text-transform: uppercase;
     line-height: 20px;
     color: var(--main-color);
+    @include screen-max ($hd) {
+        font-size: 15px;
     }
+    @include screen-max ($sm) {
+        font-size: 10px;
+    }
+}
 
 @mixin h4 () {
     font: {
@@ -43,4 +58,10 @@
     text-transform: uppercase;
     line-height: 15px;
     color: var(--main-color);
+    // @include screen-max ($hd) {
+    //     font-size: 18px;
+    //  }
+    @include screen-max ($sm) {
+        font-size: 7px;
     }
+}
