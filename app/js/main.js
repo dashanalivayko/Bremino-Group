@@ -252,12 +252,12 @@ const openFormBtn = document.querySelector('.banner__content-button');
 const openFormBtnQ = document.querySelector('.questions__content-button');
 const closeFormBtn = document.querySelector('.close');
 const sectionForm = document.querySelector('#form');
+const cards = document.querySelectorAll('.cards');
 
 openFormBtn.addEventListener('click', openModal);
 openFormBtnQ.addEventListener('click', openModal);
 closeFormBtn.addEventListener('click', closeModal);
 window.addEventListener('keydown', escKeyPress);
-
 
 function openModal() {
 	sectionForm.classList.add('form-active');
@@ -274,12 +274,21 @@ function escKeyPress(e) {
 	}
 }
 
+cards.forEach((card) => {
+	card.addEventListener('click', (event) => {
+		let buttonType = event.target;
+		if (buttonType.tagName === 'BUTTON') {
+			openModal();
+		};
+	})
+});
+
+
 // кнопка отправки
 const sendForm = document.querySelector('form');
 const mainForm = document.querySelector ('.form__content');
 const thanks = document.querySelector ('#thanks');
 const parentForm = mainForm.parentNode;
-
 
 sendForm.addEventListener('submit', formData);
 
@@ -295,38 +304,132 @@ function formData(e) {
 }
 
 //цены на складское хранение
-const sop = document.querySelector('#sop');
-const svh = document.querySelector('#svh');
-const stz = document.querySelector('#stz');
-const cold = document.querySelector('#cold');
-const opened = document.querySelector('#opened');
-const warehousesButtons = document.querySelector('.warehouses');
-const cards = document.querySelectorAll('.cards');
+const cardsSop = document.querySelector('#sop');
+const cardsSvh = document.querySelector('#svh');
+const cardsStz = document.querySelector('#stz');
+const cardsCold = document.querySelector('#cold');
+const cardsOpened = document.querySelector('#opened');
+const warehouses = document.querySelector('.warehouses');
+const warehousesButtons = document.querySelectorAll('.warehouses > button');
+const cardsSopDropdown = document.querySelector('#sop-dropdown');
+const cardsSvhDropdown = document.querySelector('#svh-dropdown');
+const cardsStzDropdown = document.querySelector('#stz-dropdown');
+const cardsOpenedDropdown = document.querySelector('#opened-dropdown');
+const cardsColdDropdown = document.querySelector('#cold-dropdown');
+let width;
 
-
-warehousesButtons.addEventListener('click', (e) => {
-    const buttonType = e.target.dataset.type;
-	if (buttonType) {
+window.addEventListener('DOMContentLoaded', () => {
+	width = document.body.clientWidth; 
+	if (width >= 890) {
+		[...warehousesButtons][0].classList.add('active');
+	}
+	if (width < 890) {
 		cards.forEach ((elem) => {
 			elem.classList.add('hidden');
 		});
-		switch (buttonType) {
+	}
+	return width
+});
+
+window.addEventListener('resize', () => {
+	width = document.body.clientWidth; 
+	if (width >= 890) {
+		cards.forEach ((elem) => {
+			elem.classList.add('hidden');
+		});
+		cardsSop.classList.remove('hidden');
+	} else {
+		cardsSop.classList.add('hidden');
+		warehousesButtons.forEach((elem) => {
+			elem.classList.remove('active');
+		})
+	}
+	return width
+});
+
+
+warehouses.addEventListener('click', (e) => {
+	let element = e.target
+	while(element.tagName !== 'BUTTON') {
+  		element = element.parentElement
+	}
+	if (element) {	
+		if (width >= 890) {
+			cards.forEach ((elem) => {
+				elem.classList.add('hidden');
+		    });
+			warehousesButtons.forEach((elem) => {
+				elem.classList.remove('active');
+			})
+			element.classList.add('active');
+			switch (element.dataset.type) {
 			case 'sop':
-				sop.classList.remove('hidden');
+				cardsSop.classList.remove('hidden');
 				break;
 			case 'svh':
-				svh.classList.remove('hidden');
+				cardsSvh.classList.remove('hidden');
 				break;
 			case 'stz':
-				stz.classList.remove('hidden');
+				cardsStz.classList.remove('hidden');
 				break;
 			case 'cold':
-				cold.classList.remove('hidden');
+				cardsCold.classList.remove('hidden');
 				break;
 			case 'opened':
-				opened.classList.remove('hidden');
+				cardsOpened.classList.remove('hidden');
 				break;
+			}
+		} else {
+			element.classList.toggle('active');
+			switch (element.dataset.type) {
+			case 'sop':
+				cardsSopDropdown.classList.toggle('hidden');
+				break;
+			case 'svh':
+				cardsSvhDropdown.classList.toggle('hidden');
+				break;
+			case 'stz':
+				cardsStzDropdown.classList.toggle('hidden');
+				break;
+			case 'cold':
+				cardsColdDropdown.classList.toggle('hidden');
+				break;
+			case 'opened':
+				cardsOpenedDropdown.classList.toggle('hidden');
+				break;
+			}
 		}
 	}
 });
 
+
+//описание центров на карте
+const labels = document.querySelectorAll('.tlc');
+const descriptions = [...document.querySelectorAll('.tlc__description')];
+labels.forEach((label) => {
+	label.addEventListener ('click', show);
+	label.addEventListener ('mouseout', close);
+})
+
+function show (e) {
+	let label = e.currentTarget;
+	descriptions.forEach((elem) => {
+		elem.classList.add('hidden');
+	})
+	if (label.classList.contains('tlc__orsha')) {
+		descriptions[0].classList.remove('hidden');
+	} else if (label.classList.contains('tlc__bruzgi')) {
+		descriptions[1].classList.remove('hidden');
+	} else if (label.classList.contains('tlc__berestovica')) {
+		descriptions[2].classList.remove('hidden');
+	} 
+}
+
+function close (e) {
+	let label = e.currentTarget;
+	if (label) {
+		descriptions.forEach((elem) => {
+			elem.classList.add('hidden');
+		})
+	}	
+}

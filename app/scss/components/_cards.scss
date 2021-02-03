@@ -4,18 +4,29 @@
     align-items: flex-start;
     height: 760px;
     justify-content: center;
+    transition: 2s display;
     @include screen-max ($lg) {
-        display: none;
+        height: 100%;
+        margin-top: 50px;
     }
     &__item {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         margin-bottom: 30px;
+        @include screen-max ($sm) {
+            margin-bottom: 10px;
+        }
         &-title {
             @include h4 ();
             font-weight: 700;
             margin-bottom: 15px;
+            @include screen-max ($lg) {
+                font-size: 13px;
+            }
+            @include screen-max ($sm) {
+                margin-bottom: 0px;
+            }
         }
         &-price {
             @include h2 ();
@@ -33,6 +44,22 @@
                 @include h4 ();
                 font-weight: 300;
                 text-transform: none;
+                @include screen-max ($lg) {
+                    font-size: 13px;
+                }
+            }
+            @include screen-max ($hd) {
+                font-size: 18px;
+                justify-content: space-between;
+                width: 350px;
+            }
+            @include screen-max ($lg) {
+                font-size: 13px;
+                padding: 15px;
+                width: 300px;
+            }
+            @include screen-max ($sm) {
+                width: 230px;
             }
         }
         &-button {
@@ -44,10 +71,21 @@
             justify-content: center;
             padding: 15px 30px;
             margin-left: 110px;
+            border: none;
+            outline: none;
             @include screen-max ($hd) {
                 font-size: 13px;
                 padding: 13px 20px;
                 margin-left: 80px;
+            }
+            @include screen-max ($lg) {
+                font-size: 10px;
+                padding: 7px 15px;
+                margin-left: 30px;
+            }
+            transition: 0.5s ease-out;
+            &:hover {
+                background-color: #25458e;
             }
         }
     }

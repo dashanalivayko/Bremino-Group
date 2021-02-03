@@ -1,3 +1,10 @@
+img {
+    transition: 0.2s;
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
 #banner {
     background-image: url(../images/banner.png);
     background-position: top right;
@@ -162,13 +169,19 @@
             margin-bottom: 100px;
             @include screen-max ($hd) {
                 width: 600px;
-                margin-top: 70px;
+            }
+            @include screen-max ($lg) {
+                margin-top: 140px;
+                width: 100%;
             }
             @include screen-max ($sm) {
                 margin-bottom: 40px;
             }
             img {
                 width: 100%;
+                &:hover {
+                    transform: initial;
+                }
             }
         }
         &__points {
@@ -367,7 +380,7 @@
 }
 
 #questions {
-    background-image: url(..\images\banner_qst.png);
+    background-image: url(../images/banner_qst.png);
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
