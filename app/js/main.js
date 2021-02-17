@@ -348,6 +348,7 @@ window.addEventListener('resize', () => {
 });
 
 
+
 warehouses.addEventListener('click', (e) => {
 	let element = e.target
 	while(element.tagName !== 'BUTTON') {
