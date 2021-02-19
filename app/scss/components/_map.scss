@@ -82,7 +82,6 @@
             color: white;
         }
         @include screen-max ($hd) {
-            width: 210px;
             font-size: 10px;
         }
         @include screen-max ($lg) {

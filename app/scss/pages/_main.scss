@@ -493,8 +493,6 @@ img {
             margin-left: auto;
             @include screen-max ($lg) {
                 margin-left: 1px;
-            }
-            @include screen-max ($sm) {
                 flex-direction: column;
             }
             &-point {
@@ -511,7 +509,9 @@ img {
                     border-right: solid 1px lightgray;
                     padding-right: 20px;
                     margin-bottom: 60px;
+                    width: 340px;
                     @include screen-max ($lg) {
+                        border-right: none;
                         margin-right: 20px;
                         margin-bottom: 20px;
                     }
