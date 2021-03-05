@@ -14,6 +14,7 @@
         flex-direction: column;
         align-items: flex-start;
         margin-bottom: 30px;
+        position: relative;
         @include screen-max ($sm) {
             margin-bottom: 10px;
         }
@@ -21,8 +22,12 @@
             @include h4 ();
             font-weight: 700;
             margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            width: 350px;
             @include screen-max ($lg) {
                 font-size: 13px;
+                width: 250px;
             }
             @include screen-max ($sm) {
                 margin-bottom: 0px;
@@ -36,10 +41,11 @@
             font-weight: 700;
             display: flex;
             align-items: center;
+            width: 350px;
             &:not(:last-child) {
                 border-bottom: solid 1px rgb(235, 236, 236);
             }
-            padding: 25px 0;
+            padding: 20px 0;
             span {
                 @include h4 ();
                 font-weight: 300;
@@ -51,15 +57,13 @@
             @include screen-max ($hd) {
                 font-size: 18px;
                 justify-content: space-between;
-                width: 370px;
             }
             @include screen-max ($lg) {
                 font-size: 13px;
-                padding: 15px;
-                width: 300px;
+                width: 250px;
             }
             @include screen-max ($sm) {
-                width: 230px;
+                width: 250px;
             }
         }
         &-button {
@@ -69,19 +73,18 @@
             color: white;
             display: flex;
             justify-content: center;
-            padding: 15px 30px;
-            margin-left: 110px;
+            padding: 13px 25px;
+            margin-left: auto;
             border: none;
             outline: none;
+            position: relative;
             @include screen-max ($hd) {
                 font-size: 13px;
                 padding: 13px 20px;
-                margin-left: 80px;
             }
             @include screen-max ($lg) {
                 font-size: 10px;
                 padding: 7px 15px;
-                margin-left: 30px;
             }
             transition: 0.5s ease-out;
             &:hover {
